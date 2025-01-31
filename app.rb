@@ -2,8 +2,7 @@ require "sinatra"
 require "sinatra/reloader"
 
 get("/") do
-  "
-  <h1>Welcome to your Sinatra App!</h1>
-  <p>Define some routes in app.rb</p>
-  "
+  @number_square=params.fetch("number").ti_i
+  @answer=[]
+erb(:homepage)
 end
