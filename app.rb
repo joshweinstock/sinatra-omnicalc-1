@@ -44,3 +44,15 @@ get("/square_root/results") do
 
     erb(:payment_results)
     end
+
+    get("/random/new") do
+      erb(:random_new)
+      end
+
+      get("/random/results") do
+        @min_input = params.fetch("user_min").to_f
+        @max_input = params.fetch("user_max").to_f
+        @rand_num = rand(@min_input..@max_input)
+    
+        erb(:random_results)
+        end
